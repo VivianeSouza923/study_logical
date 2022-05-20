@@ -14,25 +14,29 @@ Inicio
        escreval("Digite o valor de N: ")
        leia(N)
        
+       se (N>15) entao
+                escreval("NAO SERA POSSÍVEL CONTINUAR")
+       senao
        
-       fat<-1
-       para i de 1 até N faca
-            se (N>15) entao
-               escreval("NÃO SERÁ POSSÍVEL CONTINUAR")
+          se (N=0) ou (N=1) entao
+             escreval("FATORIAL = 1")
 
-            senao
-            se (N = 0) ou (N = 1) entao
-                    escreval("FATORIAL = 1")
+             senao
 
-                    senao
-                         fat <- fat*i
-                         escreval("FATORIAL = ", fat)
 
-            fimse
+                fat<-1
+                para i de 1 até N faca
+                     fat <- fat*i
 
-       
-       
-      fimpara
+
+
+                fimpara
+                escreval("FATORIAL = ", fat)
+
+           fimse
+
+       fimse
+
 
 Fimalgoritmo
 fimse

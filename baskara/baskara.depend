@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1663890930 source:/home/vivi/Documents/Estudos - Logica e Algoritmos - Udemy/baskara/main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

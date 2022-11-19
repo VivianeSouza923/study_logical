@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1668822549 source:/home/vivi/Documents/Estudos - Logica e Algoritmos - Udemy/soma_vetor/main.c
+	<stdio.h>
+	<stdlib.h>
+

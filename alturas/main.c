@@ -5,6 +5,7 @@ bem como os nomes dessas pessoas caso houver.*/
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void limpar_entrada() {
 char c;
@@ -14,7 +15,7 @@ while ((c = getchar()) != '\n' && c != EOF) {}
 int main()
 {
     int n, i;
-    char nome[n];
+    char nome[n][5];
     int idade[n];
     double altura[n];
     double contAlt = 0;
@@ -26,20 +27,19 @@ int main()
 
     for(i=0;i<n;i++){
         printf("\nDados da %dª pessoa: \n", i+1);
-        limpar_entrada();
         printf("\nNome: ");
         scanf("%s", &nome[i]);
-        limpar_entrada();
         printf("\nIdade: ");
         scanf("%d", &idade[i]);
-            if(idade[i]<16){
-               contIdade = contIdade + 1;
-            }
-        limpar_entrada();
         printf("\nAltura: ");
         scanf("%lf", &altura[i]);
-        contAlt = contAlt + altura[i];
+
+        //contAlt = contAlt + altura[i];
         }
+
+       /* if(idade[i]<16){
+               contIdade = contIdade + 1;
+            }
 
         altMedia = contAlt/n;
         printf("Altura média: %lf", altMedia);
@@ -48,7 +48,7 @@ int main()
         printf("Pessoas com menos de 16 anos: %lf", porc);
         for(i=0;i<contIdade;i++){
             printf(nome[i]);
-        }
+        }*/
 
 
     return 0;

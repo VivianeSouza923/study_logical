@@ -15,18 +15,18 @@ while ((c = getchar()) != '\n' && c != EOF) {}
 int main()
 {
     int n, i;
-    char nome[n][5];
+    char nome[n];
     int idade[n];
     double altura[n];
     double contAlt = 0;
-    int contIdade = 0;
-    double altMedia, porc;
+    double contIdade = 0;
+    double altMedia, porc, a;
 
     printf("Quantas pessoas serao digitadas?\n");
     scanf("%d", &n);
 
     for(i=0;i<n;i++){
-        printf("\nDados da %dª pessoa: \n", i+1);
+        printf("\nDados da %d� pessoa: \n", i+1);
         printf("\nNome: ");
         scanf("%s", &nome[i]);
         printf("\nIdade: ");
@@ -34,21 +34,29 @@ int main()
         printf("\nAltura: ");
         scanf("%lf", &altura[i]);
 
-        //contAlt = contAlt + altura[i];
-        }
+        contAlt = contAlt + altura[i];
+    }
+    
+    altMedia = contAlt/n;
 
-       /* if(idade[i]<16){
+    
+	for(i=0;i<n;i++){
+		if(idade[i]<16){
                contIdade = contIdade + 1;
             }
+            a = contIdade;
+	}   
+	porc = (double)a*100/n; 
+	
 
-        altMedia = contAlt/n;
-        printf("Altura média: %lf", altMedia);
+    
+    printf("Altura media: %.2lf", altMedia);
 
-        porc = (contIdade*100)/n;
-        printf("Pessoas com menos de 16 anos: %lf", porc);
-        for(i=0;i<contIdade;i++){
-            printf(nome[i]);
-        }*/
+
+    printf("\nPessoas com menos de 16 anos: %lf", porc);
+    for(i=0;i<a;i++){
+        printf(nome[i]);
+    }
 
 
     return 0;

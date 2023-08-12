@@ -5,59 +5,63 @@ bem como os nomes dessas pessoas caso houver.*/
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <conio.h>
+
 
 void limpar_entrada() {
-char c;
-while ((c = getchar()) != '\n' && c != EOF) {}
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF) {}
 }
 
-int main()
-{
+int main() {
     int n, i;
-    char nome[n];
+    char nome[n][50];  // Matriz para armazenar vários nomes
     int idade[n];
     double altura[n];
-    double contAlt = 0;
-    double contIdade = 0;
-    double altMedia, porc, a;
+    int contIdade = 0;
+    double porc = 0;
+    double a = 0;
 
     printf("Quantas pessoas serao digitadas?\n");
     scanf("%d", &n);
+    limpar_entrada(); // Limpa o buffer de entrada
 
-    for(i=0;i<n;i++){
-        printf("\nDados da %dª pessoa: \n", i+1);
-        printf("\nNome: ");
-        scanf("%s", &nome[i]);
-        printf("\nIdade: ");
+    for (i = 0; i < n; i++) {
+        printf("\nDados da %dª pessoa: \n", i + 1);
+        printf("Nome: ");
+        limpar_entrada();
+        gets(nome[i]);
+        printf("Idade: ");
         scanf("%d", &idade[i]);
-        printf("\nAltura: ");
+        printf("Altura: ");
         scanf("%lf", &altura[i]);
 
+
+    }
+
+
+    double contAlt = 0;
+    double altMedia;
+
+    for(i = 0; i < n; i++){
         contAlt = contAlt + altura[i];
+
     }
-    
-    altMedia = contAlt/n;
+    altMedia = contAlt / n;
+    printf("Altura media: %.2lf\n", altMedia);
 
-    
-	for(i=0;i<n;i++){
-		if(idade[i]<16){
-               contIdade = contIdade + 1;
-            }
-            a = contIdade;
-	}   
-	porc = (double)a*100/n; 
-	
-
-    
-    printf("Altura media: %.2lf", altMedia);
-
-
-    printf("\nPessoas com menos de 16 anos: %lf", porc);
-    for(i=0;i<a;i++){
-        printf(nome[i]);
+  /*  if (n > 0) {
+        porc = (double)contIdade * 100 / n;
     }
 
 
+    printf("Pessoas com menos de 16 anos: %.2lf%%\n", porc);
+
+    for (i = 0; i < n; i++) {
+        if (idade[i] < 16) {
+            printf("Nome: %s\n", nome[i]);
+        }
+    }
+*/
     return 0;
 }

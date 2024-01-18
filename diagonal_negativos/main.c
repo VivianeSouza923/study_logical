@@ -9,6 +9,7 @@ negativos da matriz.*/
 int main()
 {
     int N, i, j;
+    int count = 0;
 
 
     printf("Qual a ordem da matriz?");
@@ -34,6 +35,23 @@ int main()
 
         }
     }
+
+    for(i=0; i<N; i++){
+        for(j=0; j<N; j++){
+
+            if(mat[i][j] < 0){
+
+
+                count = count + 1;
+
+            }
+        }
+    }
+
+    printf("\n");
+
+
+    printf("QUANTIDADE DE NEGATIVOS = %d", count);
 
 
 

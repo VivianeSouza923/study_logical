@@ -35,6 +35,16 @@ int main()
 
         }
     }
+    
+    printf("\nQUANTIDADE DE NEGATIVOS = ");
+    for(i=0; i<N; i++){
+        for(j=0; j<N; j++){
+            if(mat[i][j] < 0){
+            	printf("%d ", mat[i][j]);
+			}
+
+        }
+    }
 
     for(i=0; i<N; i++){
         for(j=0; j<N; j++){

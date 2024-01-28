@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1706460397 source:/home/vivi/Documents/Estudos - Logica e Algoritmos - Udemy/soma_linhas/main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -24,34 +24,53 @@ int main()
    scanf("%d", &N);
 
    int mat[M][N];
+   int vet[M];
 
 
 
-   for(i=0; i<N; i++){
 
-    printf("Digite os elementos da %da. linha: ", i + 1);
-    limpar_entrada();
+   for(i=0; i<M; i++){
 
 
 
-    for(j=0; j<N+1; j++){
 
+
+            printf("Digite os elementos da %da. linha: \n", i + 1);
+            int soma_linha = 0;
+
+    for(j=0; j<N; j++){
 
 
 
 
         scanf("%d", &mat[i][j]);
+        soma_linha = soma_linha + mat[i][j];
+
+
+        limpar_entrada();
+
 
 
 
 
 
     }
+    vet[i] = soma_linha;
 
 
 
 
 
+
+
+
+
+   }
+
+   printf("VETOR GERADO: \n");
+   for(i=0; i<M; i++){
+        printf("%d ", vet[i]);
+        printf("\n");
    }
 
 

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1722968268 source:/home/vivi/Documents/Estudos - Logica e Algoritmos - Udemy/idades_cpp/main.cpp
+	<iostream>
+	<climits>
+	<iomanip>
+

@@ -15,24 +15,25 @@ int main()
 
     cout << "Dados da primeira pessoa: " << endl;
     cout << "Nome: ";
-    cin >> nome;
+    //cin >> nome;
+    getline(cin, nome);
     cout << "Idade: ";
-    cin.ignore(INT_MAX, '\n');
     cin >> idade;
 
 
     cout << "Dados da segunda pessoa: " << endl;
     cout << "Nome: ";
-    cin >> nome1;
-    cout << "Idade: ";
+    //cin >> nome1;
     cin.ignore(INT_MAX, '\n');
+    getline(cin, nome1);
+    cout << "Idade: ";
     cin >> idade1;
 
     idade_media = (float)(idade + idade1) / 2;
 
 
     cout << fixed << setprecision(1);
-    cout << "A idade média de " << nome << "e " << nome1 << "é de " << idade_media << " anos." << endl;
+    cout << "A idade média de " << nome << " e " << nome1 << " é de " << idade_media << " anos." << endl;
 
     return 0;
 }
